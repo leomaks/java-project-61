@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'checkstyle'
 }
 application {
     mainClass = 'hexlet.code.App'
@@ -24,4 +25,8 @@ test {
 
 compileJava {
     options.release = 17
+}
+
+run {
+    standardInput = System.in
 }
