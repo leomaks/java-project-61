@@ -9,7 +9,7 @@ public class App {
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
-  //      System.out.println("2 - Even");
+        System.out.println("2 - Even");
         System.out.println("0 - Exit");
 
         // takes input from the keyboard
@@ -22,11 +22,8 @@ public class App {
         if (start.equals("1")) {
             Cli.getUserName();
         }
-
-      /*  if (start.equals("2")) {
+        if (start.equals("2")) {
             Even.play();
         }
-*/
     }
-
 }

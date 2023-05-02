@@ -13,7 +13,5 @@ public class Cli {
 
         // prints the name
         System.out.println("Hello, " + App.name + "!");
-
     }
-
 }
