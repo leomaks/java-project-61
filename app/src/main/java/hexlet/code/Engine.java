@@ -1,18 +1,24 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+
 import java.util.Scanner;
 
-public class Even {
-
-    public static void play() {
-
-        Cli.getUserName();
-        Scanner input = new Scanner(System.in);
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+public class Engine {
+    public static void play(int gameName) {
+        boolean round = false;
 
         for (int i = 0; i < 3; i++) {
-            int number =  (int) (Math.random() * 1000);
-            if (!playRound(number)) {
+            switch (gameName) {
+                case 2: round = Even.playRound();
+                    break;
+                case 3: round = Calc.playRound();
+                    break;
+                default:
+            }
+
+            if (!round) {
                 break;
             }
             if (i == 2) {
@@ -20,23 +26,18 @@ public class Even {
             }
         }
     }
-    public static boolean playRound(int number) {
 
+    public static boolean isAnswerCorrect(String rightAnswer) {
         boolean win = false;
 
-        System.out.println("Question: " + number);
         System.out.println("Your answer: ");
         Scanner input = new Scanner(System.in);
         String answer = input.nextLine();
 
-        boolean isNumberEven = (number % 2 == 0);
-        boolean isAnswerYes = answer.equals("yes");
-
-        if ((isNumberEven == isAnswerYes) && (answer.equals("yes") || answer.equals("no"))) {
+        if (rightAnswer.equals(answer)) {
             win = true;
             System.out.println("Correct!");
         } else {
-            String rightAnswer = isNumberEven ? "yes" : "no";
 
             System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                     + rightAnswer  + "'");
@@ -44,6 +45,8 @@ public class Even {
         }
 
         return win;
+
+
     }
 
 }
