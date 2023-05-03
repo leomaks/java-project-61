@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Scanner;
 
@@ -15,6 +16,9 @@ public class Engine {
                     break;
                 case 3: round = Calc.playRound();
                     break;
+                case 4: round = GCD.playRound();
+                    break;
+
                 default:
             }
 

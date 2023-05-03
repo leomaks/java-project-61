@@ -5,4 +5,5 @@
 https://asciinema.org/a/6tg90B8DcdUZNb5L3H20eNoF8
 ### Игра: "Калькулятор"
 https://asciinema.org/a/RUHYRK9gLhBp9Zir0POpQXg2W
-
+### Игра: "HOD"
+https://asciinema.org/a/MiYzWgG3GKHHnqkj3sJ0gICW4
