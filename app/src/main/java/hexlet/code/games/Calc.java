@@ -1,8 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
 public class Calc {
 
     public static void play() {
@@ -23,6 +21,7 @@ public class Calc {
                 break;
             case 2: operand = "*"; result = number1 * number2;
                 break;
+            default:
         }
 
         boolean win = false;

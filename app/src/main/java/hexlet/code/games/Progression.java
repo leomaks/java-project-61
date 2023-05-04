@@ -1,8 +1,5 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-
-import java.util.Scanner;
-
 public class Progression {
 
     public static void play() {
@@ -19,12 +16,11 @@ public class Progression {
         int hiddenNumber = 0;
         System.out.print("Question: ");
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             if (i == hiddenMemberCount) {
                 System.out.print(".. ");
                 hiddenNumber = startNumber + i * step;
-            }
-            else {
+            } else {
                 System.out.print((startNumber + i * step) + " ");
             }
         }
@@ -33,5 +29,4 @@ public class Progression {
         win = Engine.isAnswerCorrect(rightAnswer);
         return win;
     }
-
 }

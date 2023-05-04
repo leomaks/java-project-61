@@ -1,8 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
 public class GCD {
 
     public static void play() {
@@ -16,7 +14,7 @@ public class GCD {
         int number1 =  (int) (Math.random() * 100);
         int number2 =  (int) (Math.random() * 100);
 
-        int nod = gcd(number1,number2);
+        int nod = gcd(number1, number2);
 
 
         System.out.println("Question: " + number1 + "  " + number2);
@@ -28,14 +26,14 @@ public class GCD {
 
     public static int gcd(int a, int b) {
 
-        while (( a != 0 ) && ( b != 0 )){
-            if (a > b)
+        while ((a != 0) && (b != 0)) {
+            if (a > b) {
                 a = a % b;
-            else
+            } else {
                 b = b % a;
+            }
         }
-        return a+b;
+        return a + b;
     }
-
 
 }
