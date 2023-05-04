@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 public class Prime {
 
     public static void play() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'");
+        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         Engine.play(6);
     }
     public static boolean playRound() {
