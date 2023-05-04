@@ -26,7 +26,7 @@ public class Calc {
 
         boolean win = false;
 
-        System.out.println("Question: " + number1 + operand + number2);
+        System.out.println("Question: " + number1 + " " + operand + " " +  number2);
         var rightAnswer = Integer.toString(result);
 
         win = Engine.isAnswerCorrect(rightAnswer);
