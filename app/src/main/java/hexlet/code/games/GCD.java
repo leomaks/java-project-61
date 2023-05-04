@@ -17,7 +17,7 @@ public class GCD {
         int nod = gcd(number1, number2);
 
 
-        System.out.println("Question: " + number1 + "  " + number2);
+        System.out.println("Question: " + number1 + " " + number2);
         var rightAnswer = Integer.toString(nod);
 
         win = Engine.isAnswerCorrect(rightAnswer);
