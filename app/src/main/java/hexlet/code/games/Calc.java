@@ -12,7 +12,7 @@ public class Calc {
         int number1 =  (int) (Math.random() * 10);
         int number2 =  (int) (Math.random() * 10);
         int operation =  (int) (Math.random() * 10);
-        String operand = "";
+        String operand = "+";
         int result = 0;
         switch (operation % 3) {
             case 0: operand = "+"; result = number1 + number2;
@@ -26,7 +26,7 @@ public class Calc {
 
         boolean win = false;
 
-        System.out.println("Question:dsfsdfdsfsd" + number1 + " " + operand + " " +  number2);
+        System.out.println("Question: " + number1 + " " + operand + " " +  number2);
         var rightAnswer = Integer.toString(result);
 
         win = Engine.isAnswerCorrect(rightAnswer);
