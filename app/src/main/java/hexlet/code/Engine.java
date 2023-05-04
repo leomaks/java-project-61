@@ -39,7 +39,7 @@ public class Engine {
     public static boolean isAnswerCorrect(String rightAnswer) {
         boolean win = false;
 
-        System.out.println("Your answer: ");
+        System.out.print("Your answer: ");
         Scanner input = new Scanner(System.in);
         String answer = input.nextLine();
 
