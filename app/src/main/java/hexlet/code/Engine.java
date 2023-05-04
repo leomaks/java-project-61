@@ -11,18 +11,24 @@ import java.util.Scanner;
 public class Engine {
     public static void play(int gameName) {
         boolean round = false;
+        final int rounds = 3;
+        final int even = 2;
+        final int calc = 3;
+        final int gcd = 4;
+        final int progression = 5;
+        final int prime = 6;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < rounds; i++) {
             switch (gameName) {
-                case 2: round = Even.playRound();
+                case even: round = Even.playRound();
                     break;
-                case 3: round = Calc.playRound();
+                case calc: round = Calc.playRound();
                     break;
-                case 4: round = GCD.playRound();
+                case gcd: round = GCD.playRound();
                     break;
-                case 5: round = Progression.playRound();
+                case progression: round = Progression.playRound();
                     break;
-                case 6: round = Prime.playRound();
+                case prime: round = Prime.playRound();
                     break;
                 default:
             }

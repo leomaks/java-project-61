@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class App {
     public static String name;
+
     public static void main(String[] args) {
 
         System.out.println("Please enter the game number and press Enter.");
