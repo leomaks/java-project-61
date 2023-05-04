@@ -3,6 +3,7 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
@@ -18,6 +19,8 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
+
         System.out.println("0 - Exit");
 
         // takes input from the keyboard
@@ -27,26 +30,26 @@ public class App {
         System.out.print("Your choice:  ");
         String start = input.nextLine();
 
-
-        if (start.equals("1")) {
+        if (!start.equals("0")) {
             Cli.getUserName();
+            switch (start) {
+                case "2":
+                    Even.play();
+                    break;
+                case "3":
+                    Calc.play();
+                    break;
+                case "4":
+                    GCD.play();
+                    break;
+                case "5":
+                    Progression.play();
+                    break;
+                case "6":
+                    Prime.play();
+                    break;
+                default:
+            }
         }
-        if (start.equals("2")) {
-            Cli.getUserName();
-            Even.play();
-        }
-        if (start.equals("3")) {
-            Cli.getUserName();
-            Calc.play();
-        }
-        if (start.equals("4")) {
-            Cli.getUserName();
-            GCD.play();
-        }
-        if (start.equals("5")) {
-            Cli.getUserName();
-            Progression.play();
-        }
-
     }
 }

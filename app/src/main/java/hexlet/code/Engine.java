@@ -4,6 +4,7 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
@@ -20,6 +21,8 @@ public class Engine {
                 case 4: round = GCD.playRound();
                     break;
                 case 5: round = Progression.playRound();
+                    break;
+                case 6: round = Prime.playRound();
                     break;
                 default:
             }

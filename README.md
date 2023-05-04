@@ -9,3 +9,6 @@ https://asciinema.org/a/RUHYRK9gLhBp9Zir0POpQXg2W
 https://asciinema.org/a/MiYzWgG3GKHHnqkj3sJ0gICW4
 ### Игра: "Арифметическая прогрессия"
 https://asciinema.org/a/eYbwBDxPKkArlftOgUSQcZaGN
+### Игра "Простое ли число?"
+https://asciinema.org/a/C7lUGYgpE3REfcxYgxhph6vj7
+
