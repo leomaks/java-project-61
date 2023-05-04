@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
@@ -18,7 +19,8 @@ public class Engine {
                     break;
                 case 4: round = GCD.playRound();
                     break;
-
+                case 5: round = Progression.playRound();
+                    break;
                 default:
             }
 
