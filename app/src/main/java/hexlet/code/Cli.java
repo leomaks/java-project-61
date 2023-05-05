@@ -1,24 +1,23 @@
 package hexlet.code;
-import hexlet.code.App;
 import java.util.Scanner;
 
-
-
 public class Cli {
+    private static String name;
     public static void getUserName() {
 
         // creates an object of Scanner
         System.out.println("Welcome to the Brain Games!");
         Scanner input = new Scanner(System.in);
-
+        String name;
         System.out.print("May I have your name? ");
 
-
-
         // takes input from the keyboard
-        Engine.name = input.nextLine();
+        name = input.nextLine();
 
         // prints the name
-        System.out.println("Hello, " + Engine.name + "!");
+        System.out.println("Hello, " + name + "!");
+    }
+    public static String getName() {
+        return name;
     }
 }
