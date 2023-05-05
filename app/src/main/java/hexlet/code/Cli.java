@@ -8,7 +8,6 @@ public class Cli {
         // creates an object of Scanner
         System.out.println("Welcome to the Brain Games!");
         Scanner input = new Scanner(System.in);
-        String name;
         System.out.print("May I have your name? ");
 
         // takes input from the keyboard
