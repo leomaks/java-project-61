@@ -9,6 +9,7 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class Engine {
+    public static String name;
     public static void play(int gameName) {
         boolean round = false;
         final int rounds = 3;
@@ -37,7 +38,7 @@ public class Engine {
                 break;
             }
             if (i == 2) {
-                System.out.println("Congratulations, " + App.name + "!");
+                System.out.println("Congratulations, " + name + "!");
             }
         }
     }
@@ -56,7 +57,7 @@ public class Engine {
 
             System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                     + rightAnswer  + "'");
-            System.out.println("Let's try again, " + App.name + "!");
+            System.out.println("Let's try again, " + name + "!");
         }
 
         return win;

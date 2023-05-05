@@ -16,7 +16,7 @@ public class Progression {
 
         int startNumber =  (int) (Math.random() * max);
         int step =  (int) (Math.random() * maxStep);
-        int hiddenMemberCount =  (int) (Math.random() * (length-1));
+        int hiddenMemberCount =  (int) (Math.random() * (length - 1));
         int hiddenNumber = 0;
         System.out.print("Question: ");
 

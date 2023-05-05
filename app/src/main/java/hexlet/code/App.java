@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 
 public class App {
-    public static String name;
+
 
     public static void main(String[] args) {
 

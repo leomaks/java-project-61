@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Cli {
     public static void getUserName() {
 
-
         // creates an object of Scanner
         System.out.println("Welcome to the Brain Games!");
         Scanner input = new Scanner(System.in);
@@ -17,9 +16,9 @@ public class Cli {
 
 
         // takes input from the keyboard
-        App.name = input.nextLine();
+        Engine.name = input.nextLine();
 
         // prints the name
-        System.out.println("Hello, " + App.name + "!");
+        System.out.println("Hello, " + Engine.name + "!");
     }
 }
