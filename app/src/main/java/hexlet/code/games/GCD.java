@@ -4,15 +4,16 @@ import hexlet.code.Engine;
 public class GCD {
 
     public static void play() {
+        final int gcd = 4;
         System.out.println("Find the greatest common divisor of given numbers.");
-        Engine.play(4);
+        Engine.play(gcd);
     }
     public static boolean playRound() {
-
+        final int max = 100;
         boolean win = false;
 
-        int number1 =  (int) (Math.random() * 100);
-        int number2 =  (int) (Math.random() * 100);
+        int number1 =  (int) (Math.random() * max);
+        int number2 =  (int) (Math.random() * max);
 
         int nod = gcd(number1, number2);
 

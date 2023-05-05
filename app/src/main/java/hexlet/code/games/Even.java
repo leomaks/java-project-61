@@ -9,9 +9,9 @@ public class Even {
         Engine.play(2);
     }
     public static boolean playRound() {
-
+        final int max = 1000;
         boolean win = false;
-        int number =  (int) (Math.random() * 1000);
+        int number =  (int) (Math.random() * max);
         System.out.println("Question: " + number);
 
         String rightAnswer = (number % 2 == 0) ? "yes" : "no";

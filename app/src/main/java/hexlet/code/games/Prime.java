@@ -4,14 +4,15 @@ import hexlet.code.Engine;
 public class Prime {
 
     public static void play() {
+        final int prime = 6;
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        Engine.play(6);
+        Engine.play(prime);
     }
     public static boolean playRound() {
 
         boolean win = false;
-
-        int number =  (int) (Math.random() * 100);
+        final int max = 100;
+        int number =  (int) (Math.random() * max);
         boolean isPrime = true;
 
         System.out.println("Question: " + number);
