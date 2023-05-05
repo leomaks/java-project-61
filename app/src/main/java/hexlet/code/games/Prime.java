@@ -12,7 +12,7 @@ public class Prime {
 
         boolean win = false;
         final int max = 100;
-        int number =  (int) (Math.random() * max);
+        int number = (int) (Math.random() * max);
         boolean isPrime = true;
 
         System.out.println("Question: " + number);
