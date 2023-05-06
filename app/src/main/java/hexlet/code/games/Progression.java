@@ -10,7 +10,7 @@ public class Progression {
         final int length = 10;
         String line;
 
-        String[][] answers = new String[rounds+1][2];
+        String[][] answers = new String[rounds + 1][2];
         answers[0][0] = "What number is missing in the progression?";
 
 

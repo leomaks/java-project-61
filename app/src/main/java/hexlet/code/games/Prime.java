@@ -8,7 +8,7 @@ public class Prime {
         final int max = 100;
         int number;
 
-        String[][] answers = new String[rounds+1][2];
+        String[][] answers = new String[rounds + 1][2];
         answers[0][0] = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
 

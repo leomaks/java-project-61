@@ -9,13 +9,13 @@ public class Even {
         final int max = 1000;
         int number;
 
-        String[][] answers = new String[rounds+1][2];
+        String[][] answers = new String[rounds + 1][2];
         answers[0][0] = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
         for (int i = 1; i <= rounds; i++) {
 
             number =  (int) (Math.random() * max);
-            answers[i][0] = "Question: " + number;; // question
+            answers[i][0] = "Question: " + number; // question
             answers[i][1] = (number % 2 == 0) ? "yes" : "no"; // right answer
         }
 

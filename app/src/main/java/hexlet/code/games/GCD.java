@@ -8,7 +8,7 @@ public class GCD {
         final int rounds = 3;
         final int max = 100;
 
-        String[][] answers = new String[rounds+1][2];
+        String[][] answers = new String[rounds + 1][2];
         answers[0][0] = "Find the greatest common divisor of given numbers.";
 
 
