@@ -4,29 +4,27 @@ import hexlet.code.Engine;
 public class Prime {
 
     public static void play() {
-        final int prime = 6;
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        Engine.play(prime);
-    }
-    public static boolean playRound() {
+        String[][] answers = new String[4][2];
+        answers[0][0] = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        boolean win = false;
+        final int rounds = 3;
         final int max = 100;
-        int number = (int) (Math.random() * max);
-        boolean isPrime = true;
+        int number;
 
-        System.out.println("Question: " + number);
+        for (int i = 1; i <= rounds; i++) {
+            boolean isPrime = true;
+            number = (int) (Math.random() * max);
 
-        for (int i = 2; i <= number / 2; i++) {
-            if (number % i == 0) {
-                isPrime = false;
+            for (int j = 2; j <= number / 2; j++) {
+                if (number % j == 0) {
+                    isPrime = false;
+                }
             }
+
+            answers[i][0] = "Question: " + number; // question
+            answers[i][1] = isPrime ? "yes" : "no"; // right answer
         }
 
-        String rightAnswer = isPrime ? "yes" : "no";
-        win = Engine.isAnswerCorrect(rightAnswer);
-        return win;
-
+        Engine.play(answers);
     }
-
 }

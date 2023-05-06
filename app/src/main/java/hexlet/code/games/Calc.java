@@ -41,7 +41,7 @@ public class Calc {
             answers[i][1] = Integer.toString(result);
         }
 
-        Engine.playArray(answers);
+        Engine.play(answers);
 
     }
 

@@ -1,51 +1,10 @@
 package hexlet.code;
-
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
-
 import java.util.Scanner;
+import hexlet.code.Cli;
 
 public class Engine {
 
-    public static void play(int gameName) {
-        boolean round = false;
-        final int rounds = 3;
-        //final int even = 2;
-        //final int calc = 3;
-        final int gcd = 4;
-        final int progression = 5;
-        final int prime = 6;
-
-        for (int i = 0; i < rounds; i++) {
-            switch (gameName) {
-          //      case even: round = Even.playRound();
-            //        break;
-          //      case calc: round = Calc.playRound();
-            //        break;
-             //   case gcd: round = GCD.playRound();
-              //      break;
-                case progression: round = Progression.playRound();
-                    break;
-                case prime: round = Prime.playRound();
-                    break;
-                default:
-            }
-
-
-
-            if (!round) {
-                break;
-            }
-            if (i == 2) {
-                System.out.println("Congratulations, " + Cli.getName() + "!");
-            }
-        }
-    }
-
-    public static void playArray(String [][] answers) {
+    public static void play(String [][] answers) {
         final int rounds = 3;
         System.out.println(answers[0][0]); // rools
 

@@ -19,7 +19,7 @@ public class Even {
             answers[i][1] = (number % 2 == 0) ? "yes" : "no"; // right answer
         }
 
-        Engine.playArray(answers);
+        Engine.play(answers);
     }
 
 }

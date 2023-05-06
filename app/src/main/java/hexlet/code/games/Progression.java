@@ -3,34 +3,35 @@ import hexlet.code.Engine;
 public class Progression {
 
     public static void play() {
-        final int progression = 5;
-        System.out.println("What number is missing in the progression?");
-        Engine.play(progression);
-    }
-    public static boolean playRound() {
+        String[][] answers = new String[4][2];
+        answers[0][0] = "What number is missing in the progression?";
 
-        boolean win = false;
+        final int rounds = 3;
         final int max = 100;
-        final int maxStep = 100;
+        final int maxStep = 20;
         final int length = 10;
+        String line;
 
-        int startNumber =  (int) (Math.random() * max);
-        int step =  (int) (Math.random() * maxStep);
-        int hiddenMemberCount =  (int) (Math.random() * (length - 1));
-        int hiddenNumber = 0;
-        System.out.print("Question: ");
+        for (int i = 1; i <= rounds; i++) {
 
-        for (int i = 0; i < length; i++) {
-            if (i == hiddenMemberCount) {
-                System.out.print(".. ");
-                hiddenNumber = startNumber + i * step;
-            } else {
-                System.out.print((startNumber + i * step) + " ");
+            int startNumber =  (int) (Math.random() * max);
+            int step =  (int) (Math.random() * maxStep);
+            int hiddenMemberCount =  (int) (Math.random() * (length - 1));
+            int hiddenNumber = 0;
+            line = "Question: ";
+
+            for (int j = 0; j < length; j++) {
+                if (j == hiddenMemberCount) {
+                    line += ".. ";
+                    hiddenNumber = startNumber + j * step;
+                } else {
+                    line += (startNumber + j * step) + " ";
+                }
             }
+            answers[i][0] = line; // question
+            answers[i][1] = Integer.toString(hiddenNumber); // right answer
         }
+        Engine.play(answers);
 
-        var rightAnswer = Integer.toString(hiddenNumber);
-        win = Engine.isAnswerCorrect(rightAnswer);
-        return win;
     }
 }

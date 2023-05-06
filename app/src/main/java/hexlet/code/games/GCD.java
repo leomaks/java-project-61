@@ -20,7 +20,7 @@ public class GCD {
             answers[i][1] = Integer.toString(gcd(number1, number2)); // right answer
         }
 
-        Engine.playArray(answers);
+        Engine.play(answers);
     }
 
     public static int gcd(int a, int b) {
