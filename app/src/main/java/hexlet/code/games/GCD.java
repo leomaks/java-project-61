@@ -4,12 +4,13 @@ import hexlet.code.Engine;
 public class GCD {
 
     public static void play() {
-        String[][] answers = new String[4][2];
-        answers[0][0] = "Find the greatest common divisor of given numbers.";
 
         final int rounds = 3;
         final int max = 100;
-        int number;
+
+        String[][] answers = new String[rounds+1][2];
+        answers[0][0] = "Find the greatest common divisor of given numbers.";
+
 
         for (int i = 1; i <= rounds; i++) {
 

@@ -3,14 +3,16 @@ import hexlet.code.Engine;
 public class Progression {
 
     public static void play() {
-        String[][] answers = new String[4][2];
-        answers[0][0] = "What number is missing in the progression?";
 
         final int rounds = 3;
         final int max = 100;
         final int maxStep = 20;
         final int length = 10;
         String line;
+
+        String[][] answers = new String[rounds+1][2];
+        answers[0][0] = "What number is missing in the progression?";
+
 
         for (int i = 1; i <= rounds; i++) {
 

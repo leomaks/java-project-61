@@ -4,12 +4,13 @@ import hexlet.code.Engine;
 public class Prime {
 
     public static void play() {
-        String[][] answers = new String[4][2];
-        answers[0][0] = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-
         final int rounds = 3;
         final int max = 100;
         int number;
+
+        String[][] answers = new String[rounds+1][2];
+        answers[0][0] = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+
 
         for (int i = 1; i <= rounds; i++) {
             boolean isPrime = true;

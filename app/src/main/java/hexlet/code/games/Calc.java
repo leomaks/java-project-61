@@ -4,11 +4,12 @@ import hexlet.code.Engine;
 public class Calc {
     public static void play() {
 
-        String[][] answers = new String[4][2];
-        answers[0][0] = "What is the result of the expression?";
         final int rounds = 3;
         final int max = 10;
         final int countOfOperations = 3;
+
+        String[][] answers = new String[rounds+1][2];
+        answers[0][0] = "What is the result of the expression?";
 
 
         for (int i = 1; i <= rounds; i++) {

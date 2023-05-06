@@ -4,13 +4,13 @@ import hexlet.code.Cli;
 
 public class Engine {
 
-    public static void play(String [][] answers) {
+    public static void play(String[][] answers) {
         final int rounds = 3;
         System.out.println(answers[0][0]); // rools
 
         boolean round = false;
 
-        for (int i = 1; i <= rounds; i++){
+        for (int i = 1; i <= rounds; i++) {
 
             System.out.println(answers[i][0]); // round question
             round = isAnswerCorrect(answers[i][1]); // answer
@@ -18,7 +18,7 @@ public class Engine {
             if (!round) {
                 break;
             }
-            if (i == 3) {
+            if (i == rounds) {
                 System.out.println("Congratulations, " + Cli.getName() + "!");
             }
         }
