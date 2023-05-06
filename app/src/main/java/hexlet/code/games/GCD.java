@@ -4,25 +4,23 @@ import hexlet.code.Engine;
 public class GCD {
 
     public static void play() {
-        final int gcd = 4;
-        System.out.println("Find the greatest common divisor of given numbers.");
-        Engine.play(gcd);
-    }
-    public static boolean playRound() {
+        String[][] answers = new String[4][2];
+        answers[0][0] = "Find the greatest common divisor of given numbers.";
+
+        final int rounds = 3;
         final int max = 100;
-        boolean win = false;
+        int number;
 
-        int number1 =  (int) (Math.random() * max);
-        int number2 =  (int) (Math.random() * max);
+        for (int i = 1; i <= rounds; i++) {
 
-        int nod = gcd(number1, number2);
+            int number1 =  (int) (Math.random() * max);
+            int number2 =  (int) (Math.random() * max);
 
+            answers[i][0] = "Question: " + number1 + " " + number2; // question
+            answers[i][1] = Integer.toString(gcd(number1, number2)); // right answer
+        }
 
-        System.out.println("Question: " + number1 + " " + number2);
-        var rightAnswer = Integer.toString(nod);
-
-        win = Engine.isAnswerCorrect(rightAnswer);
-        return win;
+        Engine.playArray(answers);
     }
 
     public static int gcd(int a, int b) {

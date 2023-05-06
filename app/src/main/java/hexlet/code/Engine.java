@@ -13,20 +13,20 @@ public class Engine {
     public static void play(int gameName) {
         boolean round = false;
         final int rounds = 3;
-        final int even = 2;
-        final int calc = 3;
+        //final int even = 2;
+        //final int calc = 3;
         final int gcd = 4;
         final int progression = 5;
         final int prime = 6;
 
         for (int i = 0; i < rounds; i++) {
             switch (gameName) {
-                case even: round = Even.playRound();
-                    break;
-                case calc: round = Calc.playRound();
-                    break;
-                case gcd: round = GCD.playRound();
-                    break;
+          //      case even: round = Even.playRound();
+            //        break;
+          //      case calc: round = Calc.playRound();
+            //        break;
+             //   case gcd: round = GCD.playRound();
+              //      break;
                 case progression: round = Progression.playRound();
                     break;
                 case prime: round = Prime.playRound();
@@ -34,10 +34,32 @@ public class Engine {
                 default:
             }
 
+
+
             if (!round) {
                 break;
             }
             if (i == 2) {
+                System.out.println("Congratulations, " + Cli.getName() + "!");
+            }
+        }
+    }
+
+    public static void playArray(String [][] answers) {
+        final int rounds = 3;
+        System.out.println(answers[0][0]); // rools
+
+        boolean round = false;
+
+        for (int i = 1; i <= rounds; i++){
+
+            System.out.println(answers[i][0]); // round question
+            round = isAnswerCorrect(answers[i][1]); // answer
+
+            if (!round) {
+                break;
+            }
+            if (i == 3) {
                 System.out.println("Congratulations, " + Cli.getName() + "!");
             }
         }
@@ -61,7 +83,6 @@ public class Engine {
         }
 
         return win;
-
 
     }
 

@@ -1,22 +1,25 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import java.util.Arrays;
 
 public class Even {
 
     public static void play() {
+        String[][] answers = new String[4][2];
+        answers[0][0] = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        Engine.play(2);
-    }
-    public static boolean playRound() {
+        final int rounds = 3;
         final int max = 1000;
-        boolean win = false;
-        int number =  (int) (Math.random() * max);
-        System.out.println("Question: " + number);
+        int number;
 
-        String rightAnswer = (number % 2 == 0) ? "yes" : "no";
-        win = Engine.isAnswerCorrect(rightAnswer);
-        return win;
+        for (int i = 1; i <= rounds; i++) {
+
+            number =  (int) (Math.random() * max);
+            answers[i][0] = "Question: " + number;; // question
+            answers[i][1] = (number % 2 == 0) ? "yes" : "no"; // right answer
+        }
+
+        Engine.playArray(answers);
     }
 
 }
