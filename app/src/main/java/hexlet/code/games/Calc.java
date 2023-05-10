@@ -2,26 +2,24 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Calc {
+
+    public static final int MAX = 10;
+    public static final int COUNT_OF_OPERATION = 3;
     public static void play() {
 
-        final int rounds = 3;
-        final int max = 10;
-        final int countOfOperations = 3;
+        String[][] answers = new String[Engine.ROUNDS][2];
+        String description = "What is the result of the expression?";
 
-        String[][] answers = new String[rounds + 1][2];
-        answers[0][0] = "What is the result of the expression?";
+        for (int i = 0; i < Engine.ROUNDS; i++) {
 
-
-        for (int i = 1; i <= rounds; i++) {
-
-            int number1 = (int) (Math.random() * max);
-            int number2 = (int) (Math.random() * max);
-            int operation = (int) (Math.random() * max);
+            int number1 = (int) (Math.random() * MAX);
+            int number2 = (int) (Math.random() * MAX);
+            int operation = (int) (Math.random() * MAX);
 
             String operand = "";
             int result = 0;
 
-            switch (operation % countOfOperations) {
+            switch (operation % COUNT_OF_OPERATION) {
                 case 0:
                     operand = "+";
                     result = number1 + number2;
@@ -38,11 +36,11 @@ public class Calc {
             }
 
 
-            answers[i][0] = "Question: " + number1 + " " + operand + " " + number2;
+            answers[i][0] = number1 + " " + operand + " " + number2;
             answers[i][1] = Integer.toString(result);
         }
 
-        Engine.play(answers);
+        Engine.play(description, answers);
 
     }
 

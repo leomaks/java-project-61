@@ -3,46 +3,51 @@ import java.util.Scanner;
 
 
 public class Engine {
+    public static final int ROUNDS = 3;
+    public static void play(String description, String[][] answers) {
 
-    public static void play(String[][] answers) {
-        final int rounds = 3;
-        System.out.println(answers[0][0]); // rools
+        // Greeting
+        System.out.println("Welcome to the Brain Games!");
+        Scanner input = new Scanner(System.in);
+        System.out.print("May I have your name? ");
 
-        boolean round = false;
+        String name = input.nextLine();
+        System.out.println("Hello, " + name + "!");
 
-        for (int i = 1; i <= rounds; i++) {
+        // printing rools
+        System.out.println(description); // rools
 
+
+        // play rounds
+        for (int i = 0; i < ROUNDS; i++) {
+
+            System.out.print("Question: ");
             System.out.println(answers[i][0]); // round question
-            round = isAnswerCorrect(answers[i][1]); // answer
 
-            if (!round) {
+            // проверка раунда
+            boolean winRound = false;
+            System.out.print("Your answer: ");
+            input = new Scanner(System.in);
+            String answer = input.nextLine();
+
+            if (answers[i][1].equals(answer)) {
+                winRound = true;
+                System.out.println("Correct!");
+            } else {
+
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
+                        + answers[i][1]  + "'");
+                System.out.println("Let's try again, " + name + "!");
+            }
+
+
+            if (!winRound) {
                 break;
             }
-            if (i == rounds) {
-                System.out.println("Congratulations, " + Cli.getName() + "!");
+            if (i == ROUNDS - 1 ) {
+                System.out.println("Congratulations, " + name + "!");
             }
         }
-    }
-
-    public static boolean isAnswerCorrect(String rightAnswer) {
-        boolean win = false;
-
-        System.out.print("Your answer: ");
-        Scanner input = new Scanner(System.in);
-        String answer = input.nextLine();
-
-        if (rightAnswer.equals(answer)) {
-            win = true;
-            System.out.println("Correct!");
-        } else {
-
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                    + rightAnswer  + "'");
-            System.out.println("Let's try again, " + Cli.getName() + "!");
-        }
-
-        return win;
-
     }
 
 }

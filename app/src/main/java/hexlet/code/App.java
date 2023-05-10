@@ -23,30 +23,17 @@ public class App {
 
         // takes input from the keyboard
         Scanner input = new Scanner(System.in);
-
-        // prints the choice
         System.out.print("Your choice:  ");
         String start = input.nextLine();
 
-        if (!start.equals("0")) {
-            Cli.getUserName();
-            switch (start) {
-                case "2":
-                    Even.play();
-                    break;
-                case "3":
-                    Calc.play();
-                    break;
-                case "4":
-                    GCD.play();
-                    break;
-                case "5":
-                    Progression.play();
-                    break;
-                case "6":
-                    Prime.play();
-                    break;
-                default:
+        switch (start) {
+            case "1" -> Cli.getUserName();
+            case "2" -> Even.play();
+            case "3" -> Calc.play();
+            case "4" -> GCD.play();
+            case "5" -> Progression.play();
+            case "6" -> Prime.play();
+            default -> {
             }
         }
     }

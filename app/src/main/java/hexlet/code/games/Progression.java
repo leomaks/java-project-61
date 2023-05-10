@@ -1,39 +1,33 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
 public class Progression {
-
+    public static final int MAX = 100;
+    public static final int MAX_STEP = 10;
+    public static final int LENGTH = 10;
     public static void play() {
 
-        final int rounds = 3;
-        final int max = 100;
-        final int maxStep = 20;
-        final int length = 10;
-        String line;
-
-        String[][] answers = new String[rounds + 1][2];
-        answers[0][0] = "What number is missing in the progression?";
+        String[][] answers = new String[Engine.ROUNDS][2];
+        String description = "What number is missing in the progression?";
 
 
-        for (int i = 1; i <= rounds; i++) {
+        for (int i = 0; i < Engine.ROUNDS; i++) {
 
-            int startNumber =  (int) (Math.random() * max);
-            int step =  (int) (Math.random() * maxStep);
-            int hiddenMemberCount =  (int) (Math.random() * (length - 1));
+            int startNumber =  (int) (Math.random() * MAX);
+            int step =  (int) (Math.random() * MAX_STEP);
+            int hiddenMemberCount =  (int) (Math.random() * (LENGTH - 1));
             int hiddenNumber = 0;
-            line = "Question: ";
+            String line = "";
 
-            for (int j = 0; j < length; j++) {
+            for (int j = 0; j < LENGTH; j++) {
                 if (j == hiddenMemberCount) {
                     line += ".. ";
                     hiddenNumber = startNumber + j * step;
-                } else {
-                    line += (startNumber + j * step) + " ";
-                }
+                } else line += (startNumber + (j * step)) + " ";
             }
             answers[i][0] = line; // question
             answers[i][1] = Integer.toString(hiddenNumber); // right answer
         }
-        Engine.play(answers);
+        Engine.play(description, answers);
 
     }
 }
