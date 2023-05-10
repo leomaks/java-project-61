@@ -22,7 +22,9 @@ public class Progression {
                 if (j == hiddenMemberCount) {
                     line += ".. ";
                     hiddenNumber = startNumber + j * step;
-                } else line += (startNumber + (j * step)) + " ";
+                } else {
+                    line += (startNumber + (j * step)) + " ";
+                }
             }
             answers[i][0] = line; // question
             answers[i][1] = Integer.toString(hiddenNumber); // right answer

@@ -44,7 +44,7 @@ public class Engine {
             if (!winRound) {
                 break;
             }
-            if (i == ROUNDS - 1 ) {
+            if (i == ROUNDS - 1) {
                 System.out.println("Congratulations, " + name + "!");
             }
         }
