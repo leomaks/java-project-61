@@ -11,19 +11,35 @@ public class Prime {
 
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            boolean isPrime = true;
-            int number = (int) (Math.random() * MAX);
-
-            for (int j = 2; j <= number / 2; j++) {
-                if (number % j == 0) {
-                    isPrime = false;
-                }
-            }
-
-            roundsData[i][0] = String.valueOf(number); // question
-            roundsData[i][1] = isPrime ? "yes" : "no"; // right answer
+            roundsData[i] = generateRoundData();
         }
 
         Engine.play(description, roundsData);
     }
+
+    public static String[] generateRoundData() {
+
+        String[] roundData = new String[2];
+        int number = (int) (Math.random() * MAX);
+
+        roundData[0] = String.valueOf(number); // question
+        roundData[1] = isPrime(number) ? "yes" : "no"; // right answer
+
+        return roundData;
+    }
+
+    public static boolean isPrime(int number) {
+        boolean isPrime = true;
+
+        for (int j = 2; j <= number / 2; j++) {
+            if (number % j == 0) {
+                isPrime = false;
+            }
+        }
+
+
+        return isPrime;
+    }
+
+
 }
