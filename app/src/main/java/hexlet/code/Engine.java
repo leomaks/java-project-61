@@ -31,8 +31,7 @@ public class Engine {
 
             if (roundsData[i][1].equals(answer)) {
                 System.out.println("Correct!");
-            }
-            else {
+            } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                         + roundsData[i][1]  + "'");
                 System.out.println("Let's try again, " + name + "!");

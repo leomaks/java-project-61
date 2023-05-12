@@ -9,17 +9,23 @@ public class GCD {
         String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
         String description = "Find the greatest common divisor of given numbers.";
 
-
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-
-            int number1 =  (int) (Math.random() * MAX);
-            int number2 =  (int) (Math.random() * MAX);
-
-            roundsData[i][0] = number1 + " " + number2; // question
-            roundsData[i][1] = Integer.toString(gcd(number1, number2)); // right answer
+            roundsData[i] = generateRoundData();
         }
 
         Engine.play(description, roundsData);
+    }
+
+    public static String[] generateRoundData() {
+        String[] roundData = new String[2];
+
+        int number1 =  (int) (Math.random() * MAX);
+        int number2 =  (int) (Math.random() * MAX);
+
+        roundData[0] = number1 + " " + number2; // question
+        roundData[1] = Integer.toString(gcd(number1, number2)); // right answer
+
+        return roundData;
     }
 
     public static int gcd(int a, int b) {
