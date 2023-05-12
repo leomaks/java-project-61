@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 
 public class Engine {
-    public static final int ROUNDS = 3;
-    public static void play(String description, String[][] answers) {
+    public static final int ROUNDS_COUNT = 3;
+    public static void play(String description, String[][] roundsData) {
 
         // Greeting
         System.out.println("Welcome to the Brain Games!");
@@ -14,15 +14,14 @@ public class Engine {
         String name = input.nextLine();
         System.out.println("Hello, " + name + "!");
 
-        // printing rools
-        System.out.println(description); // rools
-
+        // printing rules
+        System.out.println(description);
 
         // play rounds
-        for (int i = 0; i < ROUNDS; i++) {
+        for (int i = 0; i < ROUNDS_COUNT; i++) {
 
             System.out.print("Question: ");
-            System.out.println(answers[i][0]); // round question
+            System.out.println(roundsData[i][0]); // round question
 
             // проверка раунда
             boolean winRound = false;
@@ -30,24 +29,17 @@ public class Engine {
             input = new Scanner(System.in);
             String answer = input.nextLine();
 
-            if (answers[i][1].equals(answer)) {
-                winRound = true;
-                System.out.println("Correct!");
-            } else {
-
+            if (roundsData[i][1].equals(answer)) System.out.println("Correct!");
+            else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                        + answers[i][1]  + "'");
+                        + roundsData[i][1]  + "'");
                 System.out.println("Let's try again, " + name + "!");
+                return;
             }
 
-
-            if (!winRound) {
-                break;
-            }
-            if (i == ROUNDS - 1) {
-                System.out.println("Congratulations, " + name + "!");
-            }
         }
+        System.out.println("Congratulations, " + name + "!");
+
     }
 
 }

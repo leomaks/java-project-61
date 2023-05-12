@@ -6,11 +6,11 @@ public class Prime {
 
     public static void play() {
 
-        String[][] answers = new String[Engine.ROUNDS][2];
+        String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
         String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
 
-        for (int i = 0; i < Engine.ROUNDS; i++) {
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             boolean isPrime = true;
             int number = (int) (Math.random() * MAX);
 
@@ -20,10 +20,10 @@ public class Prime {
                 }
             }
 
-            answers[i][0] = String.valueOf(number); // question
-            answers[i][1] = isPrime ? "yes" : "no"; // right answer
+            roundsData[i][0] = String.valueOf(number); // question
+            roundsData[i][1] = isPrime ? "yes" : "no"; // right answer
         }
 
-        Engine.play(description, answers);
+        Engine.play(description, roundsData);
     }
 }

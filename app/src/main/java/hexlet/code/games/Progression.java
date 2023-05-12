@@ -6,11 +6,11 @@ public class Progression {
     public static final int LENGTH = 10;
     public static void play() {
 
-        String[][] answers = new String[Engine.ROUNDS][2];
+        String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
         String description = "What number is missing in the progression?";
 
 
-        for (int i = 0; i < Engine.ROUNDS; i++) {
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
 
             int startNumber =  (int) (Math.random() * MAX);
             int step =  (int) (Math.random() * MAX_STEP);
@@ -26,10 +26,10 @@ public class Progression {
                     line += (startNumber + (j * step)) + " ";
                 }
             }
-            answers[i][0] = line; // question
-            answers[i][1] = Integer.toString(hiddenNumber); // right answer
+            roundsData[i][0] = line; // question
+            roundsData[i][1] = Integer.toString(hiddenNumber); // right answer
         }
-        Engine.play(description, answers);
+        Engine.play(description, roundsData);
 
     }
 }

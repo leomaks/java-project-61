@@ -7,10 +7,10 @@ public class Calc {
     public static final int COUNT_OF_OPERATION = 3;
     public static void play() {
 
-        String[][] answers = new String[Engine.ROUNDS][2];
+        String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
         String description = "What is the result of the expression?";
 
-        for (int i = 0; i < Engine.ROUNDS; i++) {
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
 
             int number1 = (int) (Math.random() * MAX);
             int number2 = (int) (Math.random() * MAX);
@@ -36,11 +36,11 @@ public class Calc {
             }
 
 
-            answers[i][0] = number1 + " " + operand + " " + number2;
-            answers[i][1] = Integer.toString(result);
+            roundsData[i][0] = number1 + " " + operand + " " + number2;
+            roundsData[i][1] = Integer.toString(result);
         }
 
-        Engine.play(description, answers);
+        Engine.play(description, roundsData);
 
     }
 
