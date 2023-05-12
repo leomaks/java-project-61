@@ -10,38 +10,50 @@ public class Calc {
         String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
         String description = "What is the result of the expression?";
 
+        /*for (int i = 0; i < Engine.ROUNDS_COUNT; i++)
+            roundsData[i] = generateRoundData();
+        */
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
 
-            int number1 = (int) (Math.random() * MAX);
-            int number2 = (int) (Math.random() * MAX);
-            int operation = (int) (Math.random() * MAX);
+            roundsData[i] = generateRoundData();
 
-            String operand = "";
-            int result = 0;
-
-            switch (operation % COUNT_OF_OPERATION) {
-                case 0:
-                    operand = "+";
-                    result = number1 + number2;
-                    break;
-                case 1:
-                    operand = "-";
-                    result = number1 - number2;
-                    break;
-                case 2:
-                    operand = "*";
-                    result = number1 * number2;
-                    break;
-                default:
-            }
-
-
-            roundsData[i][0] = number1 + " " + operand + " " + number2;
-            roundsData[i][1] = Integer.toString(result);
         }
 
         Engine.play(description, roundsData);
 
+    }
+    public static String[] generateRoundData() {
+
+        String[] roundData = new String[2];
+
+        int number1 = (int) (Math.random() * MAX);
+        int number2 = (int) (Math.random() * MAX);
+        int operation = (int) (Math.random() * MAX);
+
+        String operand = "";
+        int result = 0;
+
+        switch (operation % COUNT_OF_OPERATION) {
+            case 0:
+                operand = "+";
+                result = number1 + number2;
+                break;
+            case 1:
+                operand = "-";
+                result = number1 - number2;
+                break;
+            case 2:
+                operand = "*";
+                result = number1 * number2;
+                break;
+            default:
+        }
+
+
+        roundData[0] = number1 + " " + operand + " " + number2;
+        roundData[1] = Integer.toString(result);
+
+        return roundData;
     }
 
 }
