@@ -29,7 +29,9 @@ public class Engine {
             input = new Scanner(System.in);
             String answer = input.nextLine();
 
-            if (roundsData[i][1].equals(answer)) System.out.println("Correct!");
+            if (roundsData[i][1].equals(answer)) {
+                System.out.println("Correct!");
+            }
             else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                         + roundsData[i][1]  + "'");

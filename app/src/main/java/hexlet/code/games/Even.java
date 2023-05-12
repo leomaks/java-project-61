@@ -8,8 +8,9 @@ public class Even {
         String[][] roundsData = new String[Engine.ROUNDS_COUNT][];
         String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++)
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             roundsData[i] = generateRoundData();
+        }
 
         Engine.play(description, roundsData);
     }

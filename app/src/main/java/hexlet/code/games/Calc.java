@@ -10,13 +10,8 @@ public class Calc {
         String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
         String description = "What is the result of the expression?";
 
-        /*for (int i = 0; i < Engine.ROUNDS_COUNT; i++)
-            roundsData[i] = generateRoundData();
-        */
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-
             roundsData[i] = generateRoundData();
-
         }
 
         Engine.play(description, roundsData);
