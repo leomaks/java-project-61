@@ -23,12 +23,12 @@ public class GCD {
         int number2 =  (int) (Math.random() * MAX);
 
         roundData[0] = number1 + " " + number2; // question
-        roundData[1] = Integer.toString(gcd(number1, number2)); // right answer
+        roundData[1] = Integer.toString(findGCD(number1, number2)); // right answer
 
         return roundData;
     }
 
-    public static int gcd(int a, int b) {
+    public static int findGCD(int a, int b) {
 
         while ((a != 0) && (b != 0)) {
             if (a > b) {
