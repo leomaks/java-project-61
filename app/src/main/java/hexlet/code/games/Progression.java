@@ -1,5 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Arrays;
 
@@ -22,7 +23,10 @@ public class Progression {
     public static String[] generateRoundData() {
 
         String[] roundData = new String[2];
-        String[] progression = generateProgression((int) (Math.random() * MAX), LENGTH, (int) (Math.random() * MAX_STEP));
+        int startNumber = Utils.generateNumber(MAX);
+        int step = Utils.generateNumber(MAX_STEP);
+
+        String[] progression = generateProgression(startNumber, LENGTH, step);
 
         int hiddenMemberCount =  (int) (Math.random() * (LENGTH - 1));
         String hiddenNumber = progression[hiddenMemberCount];

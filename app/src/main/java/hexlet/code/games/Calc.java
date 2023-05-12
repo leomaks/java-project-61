@@ -1,5 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
 
@@ -21,9 +22,9 @@ public class Calc {
 
         String[] roundData = new String[2];
 
-        int number1 = (int) (Math.random() * MAX);
-        int number2 = (int) (Math.random() * MAX);
-        int operation = (int) (Math.random() * MAX);
+        int number1 = Utils.generateNumber(MAX);
+        int number2 = Utils.generateNumber(MAX);
+        int operation = Utils.generateNumber(MAX);
 
         String operand = "";
         int result = 0;

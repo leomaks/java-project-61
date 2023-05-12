@@ -1,5 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCD {
     public static final int MAX = 100;
@@ -19,8 +20,8 @@ public class GCD {
     public static String[] generateRoundData() {
         String[] roundData = new String[2];
 
-        int number1 =  (int) (Math.random() * MAX);
-        int number2 =  (int) (Math.random() * MAX);
+        int number1 =  Utils.generateNumber(MAX);
+        int number2 =   Utils.generateNumber(MAX);
 
         roundData[0] = number1 + " " + number2; // question
         roundData[1] = Integer.toString(findGCD(number1, number2)); // right answer

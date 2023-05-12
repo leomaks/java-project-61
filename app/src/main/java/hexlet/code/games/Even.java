@@ -1,5 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Even {
     public static final int MAX = 1000;
@@ -18,7 +19,7 @@ public class Even {
     public static String[] generateRoundData() {
 
         String[] roundData = new String[2];
-        int number =  (int) (Math.random() * MAX);
+        int number =  Utils.generateNumber(MAX);
         roundData[0] = String.valueOf(number); // question
         roundData[1] = isEven(number) ? "yes" : "no"; // right answer
 

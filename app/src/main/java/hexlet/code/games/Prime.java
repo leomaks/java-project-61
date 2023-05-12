@@ -1,5 +1,6 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
     public static final int MAX = 100;
@@ -19,7 +20,7 @@ public class Prime {
     public static String[] generateRoundData() {
 
         String[] roundData = new String[2];
-        int number = (int) (Math.random() * MAX);
+        int number =  Utils.generateNumber(MAX);
 
         roundData[0] = String.valueOf(number); // question
         roundData[1] = isPrime(number) ? "yes" : "no"; // right answer
@@ -35,8 +36,6 @@ public class Prime {
                 isPrime = false;
             }
         }
-
-
         return isPrime;
     }
 
