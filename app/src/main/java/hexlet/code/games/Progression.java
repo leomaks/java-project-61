@@ -26,7 +26,7 @@ public class Progression {
 
         int hiddenMemberCount =  (int) (Math.random() * (LENGTH - 1));
         String hiddenNumber = progression[hiddenMemberCount];
-        progression[hiddenMemberCount] = ".. ";
+        progression[hiddenMemberCount] = "..";
 
         roundData[0] = Arrays.toString(progression).substring(1, Arrays.toString(progression).length() - 1)
                 .replaceAll(", ", " ");
