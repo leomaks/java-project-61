@@ -9,7 +9,6 @@ public class Prime {
         String[][] roundsData = new String[Engine.ROUNDS_COUNT][2];
         String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             roundsData[i] = generateRoundData();
         }
