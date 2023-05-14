@@ -24,32 +24,29 @@ public class Calc {
 
         int number1 = Utils.generateNumber(MAX);
         int number2 = Utils.generateNumber(MAX);
-        int operation = Utils.generateNumber(MAX);
 
-        String operand = "";
-        int result = 0;
-
-        switch (operation % COUNT_OF_OPERATION) {
-            case 0:
-                operand = "+";
-                result = number1 + number2;
-                break;
-            case 1:
-                operand = "-";
-                result = number1 - number2;
-                break;
-            case 2:
-                operand = "*";
-                result = number1 * number2;
-                break;
-            default:
-        }
-
+        char operand = generateOperand();
 
         roundData[0] = number1 + " " + operand + " " + number2;
-        roundData[1] = Integer.toString(result);
+        roundData[1] = Integer.toString(calculate(number1, number2, operand));
 
         return roundData;
+    }
+    public static int calculate(int number1, int number2, char operand) {
+
+        int result = switch (operand) {
+            case '+' -> number1 + number2;
+            case '-' -> number1 - number2;
+            case '*' -> number1 * number2;
+            default -> throw new Error("Unknown order state: " + operand);
+        };
+
+        return result;
+    }
+
+    public static char generateOperand() {
+        String operands = "+-*";
+        return operands.charAt(Utils.generateNumber(operands.length()));
     }
 
 }

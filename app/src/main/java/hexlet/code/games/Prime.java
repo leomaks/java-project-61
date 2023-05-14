@@ -29,7 +29,7 @@ public class Prime {
     }
 
     public static boolean isPrime(int number) {
-        boolean isPrime = true;
+        boolean isPrime = (number == 0)? false: true;
 
         for (int j = 2; j <= number / 2; j++) {
             if (number % j == 0) {
